@@ -68,7 +68,7 @@ let s = class extends p {
     const t = { messages: e };
     try {
       const r = await fetch(
-        "https://localhost:44352/Chatbot/Chat",
+        "https://localhost:44367/Chatbot/Chat",
         {
           method: "POST",
           headers: {

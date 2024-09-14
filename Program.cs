@@ -1,3 +1,5 @@
+using umbraco14test_2.Services;
+
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.CreateUmbracoBuilder()
@@ -6,7 +8,7 @@ builder.CreateUmbracoBuilder()
     .AddDeliveryApi()
     .AddComposers()
     .Build();
-
+builder.Services.AddScoped<IChatGptService, ChatGptService>();
 WebApplication app = builder.Build();
 
 await app.BootUmbracoAsync();
